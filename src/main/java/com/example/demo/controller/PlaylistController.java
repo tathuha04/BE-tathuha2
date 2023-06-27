@@ -57,7 +57,7 @@ public class PlaylistController {
         User user = userDetailService.getCurrentUser();
         return new ResponseEntity<>(playlistService.findAllByUserId(user.getId()), HttpStatus.OK);
     }
-
+//ooo
     @PostMapping("/add-song")
     public ResponseEntity<?> addSongToPlaylist(@RequestBody PlaylistDTO playlistDTO) {
         Optional<Song> song = songService.findById(playlistDTO.getSong_id());
